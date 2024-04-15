@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right bottom, #ff9933, #ffffff, #138808);
+  background-repeat: no-repeat; /* Prevent background from repeating */
+  background-size: cover; /* Ensure background covers entire viewport */
+}
+ 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 10px; /* Add margin at the top */
+  margin-bottom: 10px;
+}
+
+.blur-container {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation ul li {
+  font-size: 18px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.navigation ul li a:hover {
+  background: linear-gradient(to bottom, rgba(255, 153, 51, 0.7), rgba(255, 255, 255, 0.7), rgba(19, 136, 8, 0.7));
+}
+
+
+
+.jai-hind {
+  display: flex;
+  align-items: center;
+}
+
+.jai-hind-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  margin-right: 10px;
+}
+
+.jai-hind-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation ul li {
+  font-size: 18px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  /* margin-top: 20px; */
+}
+
+.image-container img {
+  width: 100%;
+  height: 80vh;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
+}
+
+
+
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #18140d55;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #13181cc7;
+}
+
+.button-container button:first-child {
+  position: absolute;
+  left: 0;
+}
+
+.button-container button:last-child {
+  position: absolute;
+  right: 0;
+}
+
+.marquee-behavior {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 18px;
+  color: #393535;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 20px;
+  /* padding: 10px 0; */
+}
+
+.marquee-behavior::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(183, 100, 18, 0), #413b3ba8, rgba(18, 136, 7, 0)); /* Indian flag colors */
+  animation: marquee-gradient 5s linear infinite;
+}
+
+@keyframes marquee-gradient {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+.life-in-army h2 {
+  color: #333;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-size: xx-large;
+}
+
+.life-in-army p {
+  color: #333;
+  font-size: 28px;
+}
+.cover{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+.error-msg {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+} */
+.error-msg {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error-msg span {
+  display: inline-block;
+}
+
+.error-msg .close-btn {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.error-msg .close-btn:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ .close-btn:hover {
+  text-decoration: underline;
+} 
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add more space between input containers if needed */
+  width: 100%; /* Full width of its container */
+   /* More padding around the input field */
+}
+
+.input-container input {
+  width: 100%; /* Take full width of its parent */
+  padding: 15px 15px 15px 45px; /* More padding for better visual space, adjust icon padding */
+  border: 2px solid #ccc; /* Make the border thicker if desired */
+  border-radius: 8px; /* Rounded corners for a better look */
+  font-size: 18px; /* Larger font size for better readability */
+}
+
+.input-container i {
+  position: absolute;
+  left: 15px; /* Adjust this depending on the padding of the input */
+  color: #555;
+  font-size: 20px; /* Larger icon size */
+}
+
+ 
+
+.login-container {
+  width: 30%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #545454;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(245,245,245,1) 36%, rgba(187,186,186,1) 100%);
+  border-radius: 10px;
+  height:50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 70%;
+}
+
+
+.login-form input {
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 40%; 
+  margin: 10px auto; 
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Ensure the button is displayed as a block element */
+}
+
+
+
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.signup-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.signup-link span {
+  color: #333;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 5px;
+  opacity: 0.8; /* Apply opacity to make the link less prominent */
+}
+
+.signup-link a:hover {
+  opacity: 1;
+}
+
+
+.soldier {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+  transform: translateY(0); 
+  transition: transform 0.3s ease;
+}
+
+.soldier:hover {
+  transform: translateY(-5px); 
+}
+
+.soldier h2 {
+  width: 100%;
+  height: auto; 
+  color: #fff;
+  background: #17283a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+input {
+  width: 60%;
+  padding: 15px;
+  margin-top: 10px;
+  border: 2px solid #0052a5;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #003366;
+}
+
+.b button , .soldier button{
+  width: 30%;
+  padding: 15px;
+  background-color: #0052a5;
+  color: #fff;
+  font-size: larger;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+.b button:hover, .soldier button {
+  background-color: #003366;
+}
+.subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.heading {
+  font-family: 'Roboto', sans-serif; /* Change font family */
+  font-size: 36px; /* Adjust font size */
+  color: #333; /* Change text color */
+  text-align: center; /* Center align text */
+  margin-bottom: 30px; /* Add some bottom margin */
+}
+
+.section {
+  background-color: #fff; /* Set background color */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  margin-bottom: 30px; /* Add some bottom margin */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.section img {
+  width: 100%; /* Make images responsive */
+  max-width: 300px; /* Set maximum width for the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  margin-bottom: 20px; /* Add some bottom margin */
+}
+.subHeading {
+  background-color: #333; /* Change background color */
+  color: #fff; /* Change text color */
+  font-size: 24px; /* Adjust font size */
+  padding: 15px; /* Add padding */
+  margin: 0; /* Remove default margin */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Add padding */
+}
+
+.content p {
+  font-size: 18px; /* Adjust font size */
+  line-height: 1.6; /* Increase line height for better readability */
+  margin-bottom: 20px; /* Add some bottom margin */
+}
+
+
+.cover {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('images/pexels-pixabay-163467.jpg'); /* Specify the path to your image */
+  background-size: cover; /* Ensure the background covers the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
